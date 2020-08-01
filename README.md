@@ -58,6 +58,21 @@ model
   });
 ```
 
+### With Node.js
+
+tractjs now runs in Node.js! Models are fetched from the file system.
+
+```js
+const tractjs = require("tractjs");
+
+const model = new tractjs.Model("./path/to/your/model");
+model
+  .predict([new tractjs.Tensor(new Float32Array([1, 2, 3, 4]), [2, 2])])
+  .then((preds) => {
+    console.log(preds);
+  });
+```
+
 ## FAQ
 
 **My model with dynamic input dimensions doesn't work. Why?**
@@ -72,7 +87,7 @@ const model = new tractjs.Model("path/to/your/model", {
 });
 ```
 
-This will however *significantly* impact performance.
+This will however _significantly_ impact performance.
 
 2. Set fixed input dimensions via input facts. Input facts are a way to provide additional information about input type and shape that can not be inferred via the model data:
 
@@ -110,6 +125,4 @@ All original work licensed under either of
 
 ### Contribution
 
-Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in the work by you, as defined in the Apache-2.0 license, shall
-be dual licensed as above, without any additional terms or conditions.
+Contributions are very welcome! See [CONTRIBUTING.md](/CONTRIBUTING.md).

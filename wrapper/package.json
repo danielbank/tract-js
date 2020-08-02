@@ -13,7 +13,7 @@
     "build-docs": "npx typedoc --out docs dist/tractjs.d.ts",
     "lint": "npx eslint .",
     "test": "npm run test:unit && npm run test:integration",
-    "test:unit": "npm run build-wrapper && jest",
+    "test:unit": "npm run build-wrapper && jest --detectOpenHandles --forceExit",
     "test:integration": "npx cypress run",
     "prepublishOnly": "npm run build && cp -a ../README.md README.md"
   },
@@ -51,6 +51,7 @@
     "@typescript-eslint/parser": "^3.1.0",
     "babel-jest": "^26.1.0",
     "cypress": "^4.11.0",
+    "datauri": "^3.0.0",
     "dts-bundle-generator": "^4.3.0",
     "eslint": "^7.1.0",
     "jest": "^26.1.0",

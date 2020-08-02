@@ -3,14 +3,11 @@
 
 module.exports = {
   clearMocks: true,
-  collectCoverage: false,
-  collectCoverageFrom: ['src/**/*.ts'],
+  collectCoverage: true,
+  collectCoverageFrom: ['dist/**/*.js'],
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['/node_modules/'],
-  coverageProvider: 'v8',
   coverageReporters: ['json', 'lcov'],
-  testEnvironment: './test/custom-test-env.ts',
   testURL: 'http://localhost',
-  timers: 'fake',
   watchman: true,
 };

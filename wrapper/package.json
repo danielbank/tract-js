@@ -13,7 +13,7 @@
     "build-docs": "npx typedoc --out docs dist/tractjs.d.ts",
     "lint": "npx eslint .",
     "test": "npm run test:unit && npm run test:integration",
-    "test:unit": "jest",
+    "test:unit": "npm run build-wrapper && jest",
     "test:integration": "npx cypress run",
     "prepublishOnly": "npm run build && cp -a ../README.md README.md"
   },
@@ -54,7 +54,6 @@
     "dts-bundle-generator": "^4.3.0",
     "eslint": "^7.1.0",
     "jest": "^26.1.0",
-    "jsdom-worker": "^0.2.1",
     "node-fetch": "^2.6.0",
     "prettier": "^2.0.5",
     "replace-in-file": "^6.1.0",

@@ -9,7 +9,7 @@ module.exports = {
   coveragePathIgnorePatterns: ['/node_modules/'],
   coverageProvider: 'v8',
   coverageReporters: ['json', 'lcov'],
-  setupFiles: ['jsdom-worker'],
+  testEnvironment: './test/custom-test-env.ts',
   testURL: 'http://localhost',
   timers: 'fake',
   watchman: true,

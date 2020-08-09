@@ -4,10 +4,8 @@
 module.exports = {
   clearMocks: true,
   collectCoverage: true,
-  collectCoverageFrom: ['dist/**/*.js'],
+  collectCoverageFrom: ['dist/tractjs.js'],
   coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: ['/node_modules/'],
-  coverageReporters: ['json', 'lcov'],
-  testURL: 'http://localhost',
-  watchman: true,
+  coveragePathIgnorePatterns: ['node_modules/'],
+  coverageReporters: ["text", "lcov"]
 };

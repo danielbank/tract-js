@@ -2,6 +2,6 @@ dist
 docs
 core
 node_modules
-coverage
 README.md
+coverage
 .DS_Store

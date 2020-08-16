@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "es2017",
     "module": "ESNext",
     "declaration": true,
     "outDir": "./dist",
@@ -12,6 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "jest",
+      "node"
     ]
   },
   "typedocOptions": {
@@ -22,4 +23,7 @@
     "disableSources": true,
     "excludePrivate": true
   },
+  "exclude": [
+    "tests"
+  ]
 }

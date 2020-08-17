@@ -1,7 +1,12 @@
-import { Model } from "../dist/tractjs.js";
+import { Model, terminate } from "../dist/tractjs.js";
 
 describe('model', () => {
-  test('loads the worker with errors', () => {
-    const model: Model = new Model('');
+  test('fails to load without input parameters', async (done) => {
+    const model: Model = new Model('./tests/plus3.pb');
+    await expect(model.modelId).rejects.toThrow();
+    terminate();
+    setTimeout(() => {
+      done();
+    }, 2000)
   });
 });

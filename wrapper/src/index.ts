@@ -119,4 +119,8 @@ class Model {
   }
 }
 
-export { Model, Tensor };
+function terminate(): void {
+  worker.terminate();
+}
+
+export { Model, Tensor, terminate };
